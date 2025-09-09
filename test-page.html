@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 TEST SITE - AFROMYTH</title>
+    <meta name="test-deployment" content="1757442400">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .emoji {
+            font-size: 4rem;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .timestamp {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .status {
+            background: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .test-info {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🧪</div>
+        <h1>TEST DEPLOYMENT</h1>
+        <p>This is a <strong>simple test page</strong> to check if GitHub Pages CDN is working properly.</p>
+        
+        <div class="timestamp">
+            Deployed: September 9, 2025 - 15:20 UTC
+        </div>
+
+        <div class="status">
+            ✅ IF YOU SEE THIS: CDN IS WORKING!
+        </div>
+
+        <div class="test-info">
+            <h3>🔍 Test Purpose:</h3>
+            <ul>
+                <li><strong>Original AFROMYTH theme:</strong> Not showing (cached)</li>
+                <li><strong>This test page:</strong> Should appear immediately</li>
+                <li><strong>Conclusion:</strong> If this renders but original doesn't = CDN issue confirmed</li>
+            </ul>
+        </div>
+
+        <p>
+            <strong>Repository:</strong> waldeba/afromyth<br>
+            <strong>Branch:</strong> gh-pages<br>
+            <strong>Original theme status:</strong> Ready but cached ⏳
+        </p>
+    </div>
+
+    <script>
+        console.log('🧪 TEST PAGE LOADED SUCCESSFULLY!');
+        console.log('Deployment time:', new Date().toISOString());
+    </script>
+</body>
+</html>
