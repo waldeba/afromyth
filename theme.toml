@@ -1,0 +1,12 @@
+name = "Afromyth"
+license = "MIT"
+licenselink = "https://github.com/yourname/afromyth-theme/blob/master/LICENSE"
+description = "A modern Hugo theme for the Afromyth website"
+homepage = "https://github.com/yourname/afromyth-theme"
+tags = ["responsive", "minimal", "modern", "ecommerce"]
+features = ["responsive"]
+min_version = "0.41.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://yourwebsite.com"

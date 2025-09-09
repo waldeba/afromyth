@@ -1,0 +1,49 @@
+<!-- Footer Section -->
+<footer class="bg-white text-gray-700 footer-padding">
+  <!-- Top border line -->
+  <div class="border-t-2 border-gray-200"></div>
+  <div class="footer-inner">
+    <div class="py-10">
+    <!-- Main footer content -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between space-y-5 lg:space-y-0">
+      <!-- Left block -->
+      <div class="lg:flex-1">
+        <h2 class="font-bold uppercase tracking-widest text-sm">
+          <span class="rammetto-font font-normal lowercase tracking-normal" style="color: #000; font-size: 0.867rem;">afromyth</span> – LIVE INTENTIONALLY.
+        </h2>
+        <p class="mt-2" style="font-size: 0.967rem; max-width: 80%;">
+          {{ .Site.Params.description }} <a href="/about/" class="hover:underline">more.....</a>
+        </p>
+      </div>
+      
+      <!-- Navigation links -->
+      <div class="lg:flex-1 flex justify-center">
+        <nav class="flex justify-center">
+          <div class="flex flex-row items-center space-x-3" style="font-family: var(--font-nav); font-size: .74rem; font-weight: 400; text-transform: uppercase; letter-spacing: .11em; white-space: nowrap; color: #666;">
+            {{ $total := len .Site.Menus.footer }}
+            {{ range $index, $item := .Site.Menus.footer }}
+            <a href="{{ .URL }}" class="hover:underline" style="color: #666; text-decoration: none; position: relative; padding-bottom: 4px; transition: opacity .2s ease;">{{ .Name }}</a>
+            {{ if lt $index (sub $total 1) }}<span class="text-gray-400">|</span>{{ end }}
+            {{ end }}
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+    <!-- Payment icons -->
+    <div class="mt-1 flex justify-start lg:justify-end lg:pr-10">
+      <div class="flex items-center space-x-1">
+        <img src="{{ "images/payments/logo-stripe.png" | relURL }}" alt="Stripe" class="h-12">
+        <img src="{{ "images/payments/Paypal.png" | relURL }}" alt="PayPal" class="h-12">
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="mt-4 flex justify-center">
+      <div class="text-gray-500" style="font-size: 0.975rem;">
+        <span>© {{ now.Format "2006" }} {{ .Site.Title | upper }}</span>
+      </div>
+    </div>
+    </div>
+  </div>
+</footer>
